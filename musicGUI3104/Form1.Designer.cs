@@ -35,11 +35,11 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
-            this.musicBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.genreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.playCntDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.singerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.musicBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.musicBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -107,10 +107,6 @@
             this.button5.Text = "재생 수 많은 순으로 정렬";
             this.button5.UseVisualStyleBackColor = true;
             // 
-            // musicBindingSource
-            // 
-            this.musicBindingSource.DataSource = typeof(musicGUI3104.Music);
-            // 
             // nameDataGridViewTextBoxColumn
             // 
             this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
@@ -139,6 +135,10 @@
             this.singerDataGridViewTextBoxColumn.Name = "singerDataGridViewTextBoxColumn";
             this.singerDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // musicBindingSource
+            // 
+            this.musicBindingSource.DataSource = typeof(musicGUI3104.Music);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -151,7 +151,8 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "3104 문채영";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.musicBindingSource)).EndInit();
             this.ResumeLayout(false);
