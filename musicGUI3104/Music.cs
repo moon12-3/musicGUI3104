@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MusicGUI3104
+namespace musicGUI3104
 {
     internal class Music
     {

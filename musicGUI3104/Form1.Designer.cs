@@ -28,20 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
+            this.musicBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.genreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.playCntDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.singerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.musicBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.nameDataGridViewTextBoxColumn,
+            this.genreDataGridViewTextBoxColumn,
+            this.playCntDataGridViewTextBoxColumn,
+            this.singerDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.musicBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(13, 123);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowTemplate.Height = 23;
             this.dataGridView1.Size = new System.Drawing.Size(776, 430);
             this.dataGridView1.TabIndex = 0;
@@ -92,6 +107,38 @@
             this.button5.Text = "재생 수 많은 순으로 정렬";
             this.button5.UseVisualStyleBackColor = true;
             // 
+            // musicBindingSource
+            // 
+            this.musicBindingSource.DataSource = typeof(musicGUI3104.Music);
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // genreDataGridViewTextBoxColumn
+            // 
+            this.genreDataGridViewTextBoxColumn.DataPropertyName = "Genre";
+            this.genreDataGridViewTextBoxColumn.HeaderText = "Genre";
+            this.genreDataGridViewTextBoxColumn.Name = "genreDataGridViewTextBoxColumn";
+            this.genreDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // playCntDataGridViewTextBoxColumn
+            // 
+            this.playCntDataGridViewTextBoxColumn.DataPropertyName = "PlayCnt";
+            this.playCntDataGridViewTextBoxColumn.HeaderText = "PlayCnt";
+            this.playCntDataGridViewTextBoxColumn.Name = "playCntDataGridViewTextBoxColumn";
+            this.playCntDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // singerDataGridViewTextBoxColumn
+            // 
+            this.singerDataGridViewTextBoxColumn.DataPropertyName = "Singer";
+            this.singerDataGridViewTextBoxColumn.HeaderText = "Singer";
+            this.singerDataGridViewTextBoxColumn.Name = "singerDataGridViewTextBoxColumn";
+            this.singerDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -106,6 +153,7 @@
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.musicBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -118,6 +166,11 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn genreDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn playCntDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn singerDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource musicBindingSource;
     }
 }
 
